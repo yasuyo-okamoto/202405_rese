@@ -1,0 +1,40 @@
+.menu_button {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  position: absolute;
+  margin-left: 50px;
+}
+
+.menu_button a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  background: #105EFF;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 80px;
+  font-weight: bold;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  box-shadow: 8px 8px 3px 4px #DEDEDE;
+}
+
+.menu_button a:hover {
+  background: #0099FF;
+  color: #FFFFFF;
+  margin-left: 5px;
+  margin-top: 5px;
+  box-shadow: none;
+}
+
+.title{
+  position: relative;
+  color: #105EFF;
+  font-weight: bold;
+  font-size: 50px;
+  margin-left: 150px;
+  
+}
