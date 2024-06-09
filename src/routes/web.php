@@ -1,8 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\Auth\UserController;
 use App\Http\Controllers\ShopController;
+use Laravel\Fortify\Features;
+use Illuminate\Http\Request;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,11 +18,25 @@ use App\Http\Controllers\ShopController;
 |
 */
 
-Route::get('/register', [UserController::class, 'create']);
+Route::get('/register', [UserController::class, 'showRegistrationForm'])
+    ->middleware(['guest'])
+    ->name('register');
 
-Route::get('/login', [UserController::class, 'login']);
+Route::post('/register', [UserController::class, 'store'])
+    ->middleware(['guest']);
 
-Route::get('/thanks', [UserController::class, 'thanks']);
+Route::get('/thanks', function() {
+    return view('thanks');
+});
+
+Route::get('/login', [UserController::class, 'showLoginForm'])->name('login');
+
+Route::post('/login', [UserController::class, 'login'])->middleware(['guest']);
+
+
+Route::middleware('auth')->group(function () {
+    Route::get('/', [ShopController::class, 'index'])->name('home');
+});
 
 Route::get('/', [ShopController::class, 'index']);
 
