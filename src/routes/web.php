@@ -40,7 +40,23 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/', [ShopController::class, 'index']);
 
-Route::get('/detail', [ShopController::class, 'detail']);
+//Route::post('/', [ShopController::class, 'store'])->name('store');
+
+Route::get('/', [ShopController::class, 'search'])->name('shop.search');
+
+Route::get('/detail/{restaurant_id}', [ShopController::class, 'detail'])->name('detail');
+
+Route::post('/detail/{restaurant_id}', [ShopController::class, 'reserve'])->name('reserve');
+
+Route::middleware('auth')->group(function () {
+    Route::post('/favorite/add/{restaurant_id}', [ShopController::class, 'add'])->name('favorite.add');
+    Route::post('/favorite/remove/{restaurant_id}', [ShopController::class, 'remove'])->name('favorite.remove');
+});
+
+//Route::post('/favorite/{restaurant_id}/add', [ShopController::class, 'add'])->name('favorite.add');
+
+//Route::post('/favorite/{restaurant_id}/remove', [ShopController::class, 'remove'])->name('favorite.remove');
+
 
 Route::get('/mypage', [ShopController::class, 'mypage']);
 

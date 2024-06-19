@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.user-info {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.reservations,
+.favorites {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.reservations .reservation-item,
+.favorites .favorite-item {
+  background-color: #e3f2fd;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.reservation-item .title,
+.favorite-item .shop-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.reservation-item .details,
+.favorite-item .details {
+  margin-top: 10px;
+}
+
+.favorites {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.favorites .favorite-item {
+  width: calc(50% - 10px);
+  /* 2 columns */
+}
