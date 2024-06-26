@@ -19,7 +19,7 @@
             </div>
             <div class="reservation-form">
                 <h2>予約</h2>
-                <form action="{{ route('reserve') }}" method="POST">
+                <form action="{{ route('reserve', ['restaurant_id' => $restaurant->id]) }}" method="POST">
                     @csrf
                     <input type="hidden" name="shop_id" value="{{ $restaurant->id }}">
                     <label for="date">Date</label>

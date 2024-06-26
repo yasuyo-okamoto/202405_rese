@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\UserController;
 use App\Http\Controllers\ShopController;
+use App\Http\Controllers\MenuController;
 use Laravel\Fortify\Features;
 use Illuminate\Http\Request;
 
@@ -57,10 +58,13 @@ Route::middleware('auth')->group(function () {
 
 //Route::post('/favorite/{restaurant_id}/remove', [ShopController::class, 'remove'])->name('favorite.remove');
 
+Route::post('/reserve/{restaurant_id}', [ShopController::class, 'reserve'])->name('reserve');
 
 Route::get('/mypage', [ShopController::class, 'mypage']);
 
-Route::get('/done', [ShopController::class, 'done']);
+Route::get('/done', [ShopController::class, 'done'])->name('done');
 
+
+Route::get('/menu', [MenuController::class, 'show'])->name('menu.show');
 
 

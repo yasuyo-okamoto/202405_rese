@@ -19,7 +19,15 @@
 <main>
   @yield('content')
 </main>
-
+  <div id="menuModal" class="modal">
+    <div class="modal-content">
+        @if(Auth::check())
+            @include('partials.menu_logged_in')
+        @else
+            @include('partials.menu_logged_out')
+        @endif
+    </div>
+  </div>
 </body>
 
 </html>

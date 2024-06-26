@@ -1,71 +1,71 @@
 .container {
- display: flex;
- justify-content: space-between;
- padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .restaurant-detail {
- width: 60%;
+  width: 60%;
 }
 
 .back-button {
- display: inline-block;
- margin-bottom: 20px;
- text-decoration: none;
- color: #000;
- font-size: 20px;
+  display: inline-block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
 }
 
 .restaurant-image {
- width: 100%;
- height: auto;
- margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
 }
 
 .restaurant-info p {
- font-size: 18px;
- line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 .reservation-form {
- width: 35%;
- padding: 20px;
- background-color: #007bff;
- color: #fff;
- border-radius: 10px;
+  width: 35%;
+  padding: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 10px;
 }
 
 .reservation-form h2 {
- margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .reservation-form label {
- display: block;
- margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 
 .reservation-form input,
 .reservation-form select {
- width: 100%;
- padding: 8px;
- margin-bottom: 20px;
- border: none;
- border-radius: 5px;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
 }
 
 .summary p {
- background-color: #105EFF;
- padding: 10px;
- border-radius: 5px;
- margin-bottom: 10px;
+  background-color: #105EFF;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .reserve-button {
- width: 100%;
- padding: 10px;
- background-color: #105EFF;
- color: #fff;
- border: none;
- border-radius: 5px;
- cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  background-color: #105EFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }

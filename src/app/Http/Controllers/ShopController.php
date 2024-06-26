@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Storage;
 use App\Models\Area;
 use App\Models\Genre;
 use App\Models\Favorite;
+use App\Models\Reservation;
 use Illuminate\Support\Facades\Auth;
 
 class ShopController extends Controller
@@ -84,6 +85,26 @@ class ShopController extends Controller
       return redirect()->back()->with('success', 'お気に入りから削除しました。');
     }
 
+  //public function reserve(Request $request, $restaurant_id)
+    //{
+      //$request->validate([
+        //'date' => 'required|date',
+        //'time' => 'required|date_format:H:i',
+        //'num_people' => 'required|integer|min=1',
+      //]);
+
+      //Reservation::create([
+        //'user_id' => auth()->id(),
+        //'restaurant_id' => $restaurant_id,
+        //'date' => $request->date,
+        //'time' => $request->time,
+        //'num_people' => $request->num_people,
+      //]);
+
+      //return redirect()->route('done');
+    //}
+
+
 
 
   public function mypage()
@@ -91,8 +112,5 @@ class ShopController extends Controller
     return view('mypage');
   }
 
-  public function done()
-  {
-    return view('done');
-  }
+
 }
