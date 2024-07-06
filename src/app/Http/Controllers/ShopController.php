@@ -106,11 +106,17 @@ class ShopController extends Controller
 
 
 
-
   public function mypage()
   {
     return view('mypage');
   }
 
-
+  public function menu()
+    {
+      if (Auth::check()) {
+        return view('partials.menu_logged_in');
+        } else {
+          return view('partials.menu_logged_out');
+        }
+    }
 }

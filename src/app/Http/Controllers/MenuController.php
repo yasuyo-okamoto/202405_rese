@@ -15,4 +15,5 @@ class MenuController extends Controller
             return view('partials.menu_logged_out');
         }
     }
+
 }

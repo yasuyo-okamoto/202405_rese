@@ -35,11 +35,7 @@ Route::get('/login', [UserController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [UserController::class, 'login'])->middleware(['guest']);
 
 
-Route::middleware('auth')->group(function () {
-    Route::get('/', [ShopController::class, 'index'])->name('home');
-});
-
-Route::get('/', [ShopController::class, 'index']);
+Route::get('/', [ShopController::class, 'index'])->name('home');
 
 //Route::post('/', [ShopController::class, 'store'])->name('store');
 
@@ -60,11 +56,12 @@ Route::middleware('auth')->group(function () {
 
 Route::post('/reserve/{restaurant_id}', [ShopController::class, 'reserve'])->name('reserve');
 
-Route::get('/mypage', [ShopController::class, 'mypage']);
+Route::get('/mypage', [ShopController::class, 'mypage'])->name('mypage');
+;
 
 Route::get('/done', [ShopController::class, 'done'])->name('done');
 
 
-Route::get('/menu', [MenuController::class, 'show'])->name('menu.show');
+Route::get('/menu', [ShopController::class, 'menu'])->name('menu');
 
 

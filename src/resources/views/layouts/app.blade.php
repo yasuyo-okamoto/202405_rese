@@ -12,7 +12,7 @@
   
 <header>
   <div class="menu_button">
-    <a href=''>≡</a>
+    <a href="{{ route('menu') }}">≡</a>
   </div>
   <p class="title">Rese</p>
 </header>
