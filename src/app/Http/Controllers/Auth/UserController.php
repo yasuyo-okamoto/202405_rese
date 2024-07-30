@@ -29,7 +29,7 @@ class UserController extends Controller
         ]);
 
         // メール認証を送信
-        //$user->sendEmailVerificationNotification();
+        $user->sendEmailVerificationNotification();
 
         return redirect('/thanks');
     }
@@ -39,7 +39,7 @@ class UserController extends Controller
         return view('auth.login');
     }
 
-  public function login(Request $request)
+  public function login(UserRequest $request)
   {
     $email = $request->email;
 
